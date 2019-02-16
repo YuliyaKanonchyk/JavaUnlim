@@ -1,8 +1,6 @@
 package com.epam.test.JavaUnlimYuliyaKanonchyk;
 
-import com.epam.test.JavaUnlimYuliyaKanonchyk.arrayOperations.ArraySort;
-import com.epam.test.JavaUnlimYuliyaKanonchyk.arrayOperations.Operation;
-import com.epam.test.JavaUnlimYuliyaKanonchyk.arrayOperations.Sum;
+import com.epam.test.JavaUnlimYuliyaKanonchyk.arrayOperations.*;
 import com.epam.test.JavaUnlimYuliyaKanonchyk.reader.ArrayReader;
 import com.epam.test.JavaUnlimYuliyaKanonchyk.reader.FileArrayReader;
 
@@ -17,11 +15,17 @@ public class Main {
       Operation sort = new ArraySort();
       sort.execute(numbers);
 
-      System.out.println("Sorted numbers:");
-      System.out.println(String.valueOf(Arrays.toString(numbers)));
-
       Operation sumOperation = new Sum();
-      Number sum = sumOperation.execute(numbers);
-      System.out.println("Summa: " + sum);
+      sumOperation.execute(numbers);
+
+      Operation minNumber = new ArrayMin();
+      minNumber.execute(numbers);
+
+      Operation maxNumber = new ArrayMax();
+      maxNumber.execute(numbers);
+
+      Operation replaced = new ReplacementNumbers();
+      replaced.execute(numbers);
+
   }
 }

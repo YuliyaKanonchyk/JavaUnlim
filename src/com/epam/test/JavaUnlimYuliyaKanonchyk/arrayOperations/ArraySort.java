@@ -7,6 +7,7 @@ public class ArraySort implements Operation {
   @Override
   public Number execute(Number [] numbers) {
     Arrays.sort(numbers);
+    System.out.println("Sorted Array : "+String.valueOf(Arrays.toString(numbers)));
     return null;
   }
 }
